@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="861.0" prefWidth="1311.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrentalsystem.AddCustomerController">
+    <Label layoutX="20.0" layoutY="20.0" styleClass="header-label" text="Add Customer Dashboard">
+        <graphic>
+            <ImageView fitHeight="24" fitWidth="24">
+                <Image url="@icons/dashboard.png" />
+            </ImageView>
+        </graphic>
+    </Label>
+    <Button contentDisplay="RIGHT" layoutX="496.0" layoutY="472.0" mnemonicParsing="false" onAction="#saveCustomerBtn" prefHeight="55.0" prefWidth="498.0" styleClass="save-btn" text="Save">
+        <graphic>
+            <ImageView>
+                <Image url="@icons/save.png" />
+            </ImageView>
+        </graphic>
+        <font>
+        <Font name="System Bold" size="26.0" />
+        </font>
+    </Button>
+   <TextField fx:id="customerNameField" layoutX="438.0" layoutY="171.0" prefHeight="55.0" prefWidth="855.0" promptText="Customer Name" styleClass="input-field" />
+   <TextField fx:id="customerIdField" layoutX="438.0" layoutY="246.0" prefHeight="55.0" prefWidth="855.0" promptText="Customer National ID" styleClass="input-field" />
+   <TextField fx:id="customerPhoneField" layoutX="438.0" layoutY="321.0" prefHeight="55.0" prefWidth="855.0" promptText="Phone" styleClass="input-field" />
+   <TextField fx:id="customerAddressField" layoutX="438.0" layoutY="394.0" prefHeight="55.0" prefWidth="855.0" promptText="Physical Address" styleClass="input-field" />
+
+</AnchorPane>

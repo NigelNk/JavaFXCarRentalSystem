@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="861.0" prefWidth="1311.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrentalsystem.AddVehicleController">
+
+    <Label layoutX="10.0" layoutY="10.0" style="-fx-font-size: 20px; -fx-text-fill: #2c3e50;" text="Add Vehicle Dashboard">
+        <graphic>
+            <ImageView>
+                <Image url="@icons/dashboard.png" />
+            </ImageView>
+        </graphic>
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <TextField fx:id="vehicleIDField" layoutX="437.0" layoutY="234.0" prefHeight="61.0" prefWidth="1015.0" promptText="Vehicle ID" styleClass="input-field" />
+    <TextField fx:id="brandField" layoutX="437.0" layoutY="153.0" promptText="Brand" styleClass="input-field" />
+    <TextField fx:id="modelField" layoutX="437.0" layoutY="395.0" promptText="Model" styleClass="input-field" />
+    <TextField fx:id="transmission" layoutX="437.0" layoutY="473.0" promptText="Transmission" styleClass="input-field" />
+    <ComboBox fx:id="vehicleTypeBox" layoutX="437.0" layoutY="310.0" promptText="Select Vehicle Type" styleClass="dropdown">
+        <items>
+          <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Car" />
+              <String fx:value="Truck" />
+              <String fx:value="Bike" />
+          </FXCollections>
+        </items>
+    </ComboBox>
+
+    <CheckBox fx:id="availabilityCheck" layoutX="718.0" layoutY="736.0" styleClass="checkbox" text="Available" />
+
+    <ImageView fx:id="vehicleImageView" fitHeight="200" fitWidth="300" layoutX="50" layoutY="240" preserveRatio="true" styleClass="vehicle-image" />
+    <!-- Upload Button -->
+    <Button layoutX="688.0" layoutY="686.0" onAction="#handleUploadImage" prefHeight="36.0" prefWidth="152.0" text="Upload Vehicle Image" />
+
+    <Button fx:id="handleSaveVehicle" contentDisplay="RIGHT" layoutX="691.0" layoutY="786.0" onAction="#handleSaveVehicle" prefWidth="213.0" styleClass="primary-btn" text="Save">
+        <graphic>
+            <ImageView>
+                <Image url="@icons/save.png" />
+            </ImageView>
+        </graphic>
+    </Button>
+   <TextField fx:id="dailyRateField1" layoutX="437.0" layoutY="616.0" promptText="Daily Rate" styleClass="input-field" />
+   <TextField fx:id="speed" layoutX="437.0" layoutY="545.0" promptText="Speed" styleClass="input-field" />
+
+</AnchorPane>

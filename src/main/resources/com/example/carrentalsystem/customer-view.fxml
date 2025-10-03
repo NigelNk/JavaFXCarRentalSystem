@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="861.0" prefWidth="1311.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carrentalsystem.CustomerController">
+
+    <TableView fx:id="customerTable" layoutX="275.0" layoutY="134.0" prefHeight="647.0" prefWidth="948.0">
+        <columns>
+            <TableColumn fx:id="colID" prefWidth="100" text="Customer ID" />
+
+            <TableColumn fx:id="colNames" prefWidth="150" text="Name" />
+            <TableColumn fx:id="colPhone" prefWidth="100" text="Phone" />
+
+            <TableColumn fx:id="colAddress" prefWidth="150" text="Physical Address" />
+        </columns>
+    </TableView>
+    <Label layoutX="10.0" layoutY="10.0" style="-fx-font-size: 20px; -fx-text-fill: #2c3e50;" text="Customer Dashboard">
+        <graphic>
+            <ImageView>
+                <Image url="@icons/dashboard.png"/>
+            </ImageView>
+        </graphic>
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+</AnchorPane>
